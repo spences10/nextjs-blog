@@ -6,13 +6,13 @@ import styles from './layout.module.css'
 const name = 'Scott Spence'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({
+export const Layout = ({
   children,
   home,
 }: {
   children: React.ReactNode
   home?: boolean
-}) {
+}) => {
   return (
     <div className={styles.container}>
       <Head>
