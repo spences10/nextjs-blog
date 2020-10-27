@@ -6,15 +6,17 @@ import { Layout, siteTitle } from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
 import utilStyles from '../styles/utils.module.css'
 
-export default ({
-  allPostsData,
-}: {
-  allPostsData: {
-    date: string
-    title: string
-    id: string
-  }[]
-}) => {
+const Index = (
+  {
+    allPostsData,
+  }: {
+    allPostsData: {
+      date: string
+      title: string
+      id: string
+    }[]
+  }
+) => {
   return (
     <Layout home>
       <Head>
@@ -49,7 +51,9 @@ export default ({
       </section>
     </Layout>
   )
-}
+};
+
+export default Index;
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData()
